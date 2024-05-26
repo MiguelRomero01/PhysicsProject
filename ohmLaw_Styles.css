@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*Body*/
+body{
+    background-image: url(550493.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*title*/
+h1{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #5F757F;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 2em;
+}
+
+/*User fields*/
+#user-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-left: -5rem;
+}
+ 
+.field {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 2%;
+    font-family: "Roboto", sans-serif;
+}
+    
+.field label {
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px; 
+    text-align: end;
+    margin-right: 20px; 
+}
+ 
+.field input, .field select {
+    flex: 1; /* Los inputs se expanden para llenar el espacio restante */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+ 
+/*user inputs*/
+input,select{
+    font-size: 20px;
+    width: 15rem;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    outline: none;
+    transition: all 0.2s ease-in;
+}
+/*buttons*/
+#main_buttons{
+    text-align: center;
+    margin-top: 20px;
+}
+
+button{
+    font-size: 18px;
+    margin-right: 2rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border-color: rgb(255, 255, 255);
+    padding: 4px;
+    transition: all 0.1s ease-in;
+}
+
+/*-----hovers------*/
+/*inputs*/
+input:hover, select:hover{
+    background-color: rgba(255, 255, 255, 0.414);
+    scale: 1.05;
+}
+
+/*buttons*/
+button:hover{
+    border-color: rgb(82, 150, 214);
+    background-color: rgba(67, 183, 229, 0.325);
+    scale: 1.05;
+}

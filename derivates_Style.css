@@ -1,0 +1,200 @@
+body {
+     background-image: url(https://wallpapercave.com/wp/wp3978484.png);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+}
+
+h1{
+     color: #078ab2;
+     text-align: center;
+     font-size: 45px;
+     font-weight: 1000;
+}
+
+/*--calculator operation and main buttons*/
+#Calculator-Display #Calculator-ResultContainer{
+     margin: 8vh 0 20px 0;
+     text-align: center;
+}
+
+#Calculator-Display #Calculator-ResultContainer label{
+     font-size: 20px;
+}
+
+#Calculator-Display #Calculator-ResultContainer #cbox-options{
+     font-size: 16px;
+     border-color: transparent;
+     border-bottom: 1px solid black;
+     background-color: transparent;
+     margin: 0 15px 0 5px;
+     padding: 1px;
+     cursor: pointer;
+     transition: all 0.1s ease-in;
+     outline: none;
+}
+
+
+#User-Operation{
+     font-size: 18px;
+     font-weight: 400;
+     border-color: transparent;
+     background-color: transparent;
+     border-bottom: 2px solid black;
+     margin: 0 -5px 0 1px;
+     padding: 2px;
+     padding-top: 6px;
+     width: 25vw;
+     outline: none;
+     transition: all 0.2s ease-in-out;
+}
+
+#Calculator-Display #Calculator-ResultContainer button{
+     font-size: 18px;
+     width: 5rem;
+     display: inline;
+     align-items: center;
+     cursor: pointer;
+}
+
+#Calculte, #btn-clear{
+     background-color: #3fc7edd2;
+     border-color: rgb(0, 195, 255);
+     margin-right: 1em;
+     border-radius: 5px;
+     transition: all 0.2s ease-in-out;
+}
+
+#btn-remove{
+     width: 2rem !important;
+     margin-right: 20px;
+     background-color: transparent;
+     border-color: transparent;
+     transition: all 0.2s ease-in-out;
+}
+/*--Calculator operation and main buttons : hover*/
+#Calculator-Display #Calculator-ResultContainer #cbox-options:hover{
+     scale: 1.1;
+     background-color: #6a6a6a2a;
+     border-radius: 10px;
+}
+
+#User-Operation:hover{
+     scale: 1.03;
+     background-color: #15b1ff2a;
+     border-radius: 8px;
+}
+
+#User-Operation::placeholder{
+     color: rgba(0, 0, 0, 0.223);
+}
+
+#Calculte:hover, #btn-clear:hover{
+     scale: 1.05;
+     background-color: #09bcede4;
+}
+
+#btn-remove:hover{
+     scale: 1.06;
+}
+
+/*--Calculator buttons*/
+#buttons-container{
+     display: grid;
+     grid-template-columns: repeat(6, auto); /* Crea una cuadrícula con 5 columnas */
+     gap: 10px; /* Espacio entre los elementos */
+     justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+#buttons-container button{
+     font-size: 17px;
+     width: 3.9rem;
+     height: 2.8rem;
+     padding: 10px; 
+     text-align: center; 
+     border-radius: 10px;
+}
+
+#buttons-container .numbers{
+     background-color: skyblue;
+     border-color: rgb(75, 136, 160);
+}
+
+#buttons-container .operations{
+     background-color: rgb(250, 91, 91);
+     border-color: rgb(143, 44, 44);
+}
+
+#buttons-container .advanced-operations{
+     background-color: rgb(70, 157, 233);
+     border-color: rgb(32, 96, 151);
+}
+
+#buttons-container .advanced-numbers{
+     background-color: #44ffc7;
+     border-color: #31b08a;
+}
+
+#buttons-container .trigonometric{
+     background-color: #15c38f;
+     border-color: #0d7556;
+}
+
+#buttons-container .variables{
+     background-color: #09e9a5;
+     border-color: #0a976d;
+}
+
+#buttons-container button:hover{
+     transition: all 0.2s ease-in;
+     scale: 1.05;
+}
+
+#buttons-container .numbers:hover{
+     background-color: rgb(87, 194, 233);
+     border-color: rgb(50, 99, 118);
+}
+
+#buttons-container .operations:hover{
+     background-color: rgb(245, 68, 68);
+     border-color: rgb(109, 39, 39);
+}
+
+#buttons-container .advanced-operations:hover{
+     background-color: rgb(72, 169, 254);
+     border-color: rgb(16, 76, 130);
+}
+
+#buttons-container .advanced-numbers:hover{
+     background-color: #5befc2;
+     border-color: #31b08a;
+}
+
+#buttons-container .trigonometric:hover{
+     background-color: #21e2a8;
+     border-color: #0a5740;
+}
+
+#buttons-container .variables:hover{
+     background-color: #24ffbd;
+     border-color: #085941;
+}
+
+#container-Result{
+     margin-top: 50px;
+     display: grid;
+     grid-template-columns: auto;
+     justify-content: center; 
+}
+
+#User-result-X, #User-result-Y, #User-result-Z{
+     font-size: 19px;
+     font-weight: 300;
+     margin-top: -1px;
+}
+
+#User-result-Final{
+     font-size: 20.5px;
+     font-weight: 600;
+     
+}

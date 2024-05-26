@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Index</title>
+     <link href="index_Style.css" rel="stylesheet" type="text/css" />
+     <link href="backgroundIndex_Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="scroll-bg"></div><!--Main Background -->
+
+<h1 id="physics-title">¡Selecciona tu operacion ideal!</h1>
+<p id="main-text">
+  ¡Bienvenido! Aquí encontrarás una variedad de calculadoras diseñadas para resolver problemas específicos de la física. Utiliza los botones para explorar nuestras herramientas y seleccionar la calculadora que necesites para tus cálculos.</p>
+
+<!--SLIDERS-->
+<div class="container">
+  <ul class="slider">
+    <li id="slide1">
+      <img src="Campo-Electrico-768x432.png" alt="">
+    </li>
+    
+    <li id="slide2">
+      <img src="Captura de pantalla 2024-05-19 172031.png" alt="">
+    </li>
+
+  </ul>
+  <div id="btn-container">
+    <button class="Btn-redirectLink" onclick="btn_redirectHTML()">Saber más</button> <!-- BUTTON LINK -->
+  </div>
+  <!--SLIDERS BUTTONS-->
+  <ul class="menu">
+    <li class="nav-button" onclick="get_CurrentSlide(1)">
+      <a href="#slide1">1</a>
+    </li>
+    <li class="nav-button" onclick="get_CurrentSlide(2)">
+      <a href="#slide2">2</a>
+    </li>
+
+</ul>
+</div>
+  
+  <script src="index_GoHTML.js"></script>
+</body>
+</html>

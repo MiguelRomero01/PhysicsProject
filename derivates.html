@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculator</title>
+     <link href="derivates_Style.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+</head>
+
+<body>
+     <h1 class="ProjectTitle">Campo Eléctrico</h1>
+
+     <!--Buttons and user fields about calculator-->
+     <div id="Calculator-Display">
+          <!--Select variables and put in fuction-->
+          <div id="Calculator-ResultContainer">
+               <label for="cbox-options" id="Text-Cbox">Variables
+                    <select aria-label="User-ComboBox-VariablesToUse" id="cbox-options">
+                         <script src="derivates_optionsCbox.js"></script>
+                    </select>
+               </label>
+
+               <!--Place where the user puts into operation-->
+               <input type="text" id="User-Operation" placeholder="Operation">
+
+               <!--Main Buttons-->
+               <button type="button" id="btn-remove" title="Remove" onclick="removeLastLetter()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                    <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z"/></svg>
+               </button>
+               <button type="button" id="Calculte" onclick="Calculate()">Calcular</button>
+               <button type="button" id="btn-clear" onclick="clear_all()">Limpiar</button>
+          </div><br>
+          
+          <!--Calculator bottons-->     
+          <div id="buttons-container">
+                    <!--first row-->
+                    <button type="button" id="btn-0" class="numbers" onclick="addOperation(0)">0</button>
+                    <button type="button" id="btn-1" class="numbers" onclick="addOperation(1)">1</button>
+                    <button type="button" id="btn-2" class="numbers" onclick="addOperation(2)">2</button>
+                    <button type="button" id="btn-3" class="numbers" onclick="addOperation(3)">3</button>
+                    <button type="button" id="btn-4" class="numbers" onclick="addOperation(4)">4</button>
+                    <button type="button" id="btn-+" class="operations" onclick="addOperation('+')">+</button>
+                    <!--second row-->
+                    <button type="button" id="btn-5" class="numbers" onclick="addOperation(5)">5</button>
+                    <button type="button" id="btn-6" class="numbers" onclick="addOperation(6)">6</button>
+                    <button type="button" id="btn-7" class="numbers" onclick="addOperation(7)">7</button>
+                    <button type="button" id="btn-8" class="numbers" onclick="addOperation(8)">8</button>
+                    <button type="button" id="btn-9" class="numbers" onclick="addOperation(9)">9</button>
+                    <button type="button" id="btn--" class="operations" onclick="addOperation('-')">-</button>
+                    <!--third row-->
+                    <button type="button" id="btn-x^2" class="advanced-operations" onclick="addOperation('^2')">x²</button>
+                    <button type="button" id="btn-x^x" class="advanced-operations" onclick="addOperation('^')">^</button>
+                    <button type="button" id="btn-ln(x)" class="advanced-operations" onclick="addOperation('ln(')">ln(x)</button>
+                    <button type="button" id="btn-p(1)" class="advanced-operations" onclick="addOperation('(')">(</button>
+                    <button type="button" id="btn-p(2)" class="advanced-operations" onclick="addOperation(') ')">)</button>
+                    <button type="button" id="btn-*" class="operations" onclick="addOperation('*')">*</button>
+                    <!--fourth row-->
+                    <button type="button" id="btn-f(x)e" class="advanced-numbers" onclick="addOperation('e')">e</button>
+                    <button type="button" id="btn-f(x)sin(x)" class="trigonometric" onclick="addOperation('sin(')">sin(x)</button>
+                    <button type="button" id="btn-f(x)cos(x)" class="trigonometric" onclick="addOperation('cos(')">cos(x)</button>
+                    <button type="button" id="btn-f(x)tan(x)" class="trigonometric" onclick="addOperation('tan(')">tan(x)</button>
+                    <button type="button" id="btn-f(x)cot(x)" class="trigonometric" onclick="addOperation('cot(')">cot(x)</button>
+                    <button type="button" id="btn-/" class="operations" onclick="addOperation('/')">/</button>
+                    <!--fifth row-->
+                    <button type="button" id="btn-f(x)sec(x)" class="trigonometric" onclick="addOperation('sec(')">sec(x)</button>
+                    <button type="button" id="btn-f(x)csc(x)" class="trigonometric" onclick="addOperation('csc(')">csc(x)</button>
+                    <button type="button" id="btn-x" class="variables" onclick="addOperation('x')">x</button>
+                    <button type="button" id="btn-y" class="variables" onclick="addOperation('y')">y</button>
+                    <button type="button" id="btn-z" class="variables" onclick="addOperation('z')">z</button>
+     </div>
+     
+     <!--Here is the result field-->
+     <div id="container-Result">
+          <p id="User-result-X"></p>
+          <p id="User-result-Y"></p>
+          <p id="User-result-Z"></p><br>
+          <p id="User-result-Final"></p>
+     </div>
+     
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js?v:1.0"></script>
+     <script src="derivates_Buttons.js?v:2.0"></script>
+     <script src="derivates_MathResult.js?v:1.3"></script>
+     
+</body>
+</html>

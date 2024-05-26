@@ -1,0 +1,20 @@
+@keyframes scrollBg {
+     from {
+       transform: translateY(0px);
+     }
+     to {
+       transform: translateY(-330px);
+     }
+   }
+   
+   .scroll-bg {
+     filter: blur(10px);
+     height: 100%;
+     width: 100%;
+     position: fixed;
+     padding-bottom: 330px;
+     background-image: url('https://st2.depositphotos.com/5486284/8016/v/600/depositphotos_80162626-stock-illustration-set-of-physical-equipment.jpg');
+     background-size: cover;
+     animation: scrollBg 40s linear forwards;
+     z-index: -1;
+  }

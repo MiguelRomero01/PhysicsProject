@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ley de Ohm</title>
+     <link href="ohmLaw_Styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Densidad de Corriente</h1><br>
+    
+    <div id="user-fields">
+
+        <div class="field">
+            <label for="cbox-materials" class="text-material">Material:</label>
+            <select id="cbox-materials">
+                <script src="ohm's Law/cbox_MaterialOptions.js"></script>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="material-const" class="userFields-text">Conductividad:</label>
+            <input type="text" class="material-const" placeholder="[sm/m²]">
+        </div>
+
+        <div class="field">
+            <label for="elect-camp" class="userFields-text">Campo Eléctrico:</label>
+            <input type="text" class="elect-camp" placeholder="[v/m]"> 
+        </div>
+
+        <div class="field">
+            <label for="current-density" class="userFields-text">Densidad de Corriente:</label>
+            <input type="text" class="current-density" placeholder="[A/m²]"> 
+        </div>
+    </div>
+        
+    <div id="main_buttons">
+        <button type="button" id="btn-calculate" onclick="calculate_OhmLaw()">Calcular</button>
+        <button type="button" id="btn-clear" onclick="clear_OhmLaw()">Limpiar</button>
+    </div>
+
+        <script src="cbox_MaterialOptions.js"></script>
+        <script src="ohmLaw_Math.js"></script>
+    </body>
+</html>
