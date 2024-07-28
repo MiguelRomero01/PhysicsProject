@@ -2,7 +2,7 @@ const select_material = document.getElementById('cbox-materials'); // Obtén el 
 
 const materials_Dict = {
     '': '',
-    'oro': '45,2 * 10^6',
+    'oro': '45,2 * 10^5',
     'plata': '63,0 * 10^6',
     'hierro': '10 * 10^6',
     'diamante': '1 * 10^-14',
