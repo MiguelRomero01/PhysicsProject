@@ -1,7 +1,7 @@
 
 /*------------------Solve the math Operation--------------------*/ 
 
-// Función para reemplazar "ln(x)" por "log(x)"
+// Función para reemplazar "ln(x)" por "log(x) hkjh"
 function replaceLnForLog(operacion) {
     const regex = /ln\(([^\)]+)\)/g;
     operacion = operacion.replace(regex, 'log($1)');
